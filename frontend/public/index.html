@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoScope - Advanced Analytics Platform</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/charts.js" defer></script>
+    <script src="assets/js/controls.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">CryptoScope</div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#nft">NFT Tracker</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <section class="hero-section">
+            <h1 class="hero-title">Advanced Crypto Analytics</h1>
+            <p class="hero-subtitle">Detect pump-and-dump schemes, predict NFT floor prices, and analyze crypto projects with AI-powered insights</p>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">1,247</div>
+                <div class="stat-label">Projects Analyzed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">89</div>
+                <div class="stat-label">Schemes Detected</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">94.3%</div>
+                <div class="stat-label">Prediction Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Real-time Monitoring</div>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="control-buttons">
+                <button class="btn btn-primary" id="startScraping">Start Scraping</button>
+                <button class="btn btn-secondary" id="pauseScraping">Pause</button>
+                <button class="btn btn-secondary" id="exportData">Export Data</button>
+                <button class="btn btn-secondary" id="refreshDashboard">Refresh</button>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Price Movements</h3>
+                    <svg class="card-icon" viewBox="0 0 24 24">
+                        <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zm-2-8l-3-3-3 3-3-3v6h12V11z"/>
+                    </svg>
+                </div>
+                <div class="chart-container">
+                    <canvas id="priceChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3 class="card-title">Risk Analysis</h3>
+                    <svg class="card-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                </div>
+                <div class="chart-container">
+                    <canvas id="riskChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                </svg>
+                <h3 class="feature-title">Real-time Scraping</h3>
+                <p class="feature-description">Continuously monitor CoinGecko, OpenSea, and crypto Twitter for the latest market data and sentiment analysis.</p>
+            </div>
+
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="feature-title">AI-Powered Analysis</h3>
+                <p class="feature-description">Advanced machine learning algorithms analyze whitepapers and detect suspicious patterns in real-time.</p>
+            </div>
+
+            <div class="feature-card">
+                <svg class="feature-icon" viewBox="0 0 24 24">
+                    <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/>
+                </svg>
+                <h3 class="feature-title">Pump & Dump Detection</h3>
+                <p class="feature-description">Identify coordinated market manipulation schemes using advanced anomaly detection algorithms.</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-header">
+                <h3 class="card-title">Recent Detections</h3>
+                <svg class="card-icon" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Risk Level</th>
+                        <th>Confidence</th>
+                        <th>Detected</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="detectionsTable">
+                    <tr>
+                        <td>MoonCoin</td>
+                        <td>High</td>
+                        <td>94.2%</td>
+                        <td>2 hours ago</td>
+                        <td><span class="status-badge status-danger">Alert</span></td>
+                    </tr>
+                    <tr>
+                        <td>SafeGem</td>
+                        <td>Medium</td>
+                        <td>78.5%</td>
+                        <td>4 hours ago</td>
+                        <td><span class="status-badge status-warning">Watch</span></td>
+                    </tr>
+                    <tr>
+                        <td>EthMax</td>
+                        <td>Low</td>
+                        <td>45.3%</td>
+                        <td>6 hours ago</td>
+                        <td><span class="status-badge status-active">Safe</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 CryptoScope. Advanced Analytics Platform for Crypto & NFT Markets</p>
+    </footer>
+</body>
+</html>
